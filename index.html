@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+
+<head>
+    <title> Weather Visualizations Dashboard </title>
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Nav Bar fixed-top-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="plots.html" id="navbarDropdownMenuLink"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plots
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="temperature.html">Max Temp</a>
+                        <a class="dropdown-item" href="humidity.html">Humidity</a>
+                        <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                        <a class="dropdown-item" href="wind-speed.html">Wind Speed</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comparisons.html">Comparisons</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="data.html">Data</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Body -->
+    <section class="content-section-white" id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1>Welcome to Weather Visualizations</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <br>
+                    <p> On this Website you will find a variety of plots comparing a random sample of cities' latitude
+                        to various other weather conditions.
+                        The underlying data used to perform this analysis was obtained from the OpenWeatherMap API.
+                        Information from over over 500 cities was pulled and cleansed. After assembling the dataset,
+                        we used Pandas & Matplotlib to plot various aspects of the weather conditions vs. latitude.</p>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                    <br>
+                    <p>Factors considered in this analysis include: temperature, cloudiness, wind speed, and humidity.
+                        This site
+                        provides the source data as a downloadble CSV, various visualizations created as part of the
+                        analysis along with
+                        explanations and descriptions of any trends and correlations witnessed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Section Nav -->
+    <section class="content-section-color">
+        <div class="container">
+            <div class="row"></div>
+            <div class="card-columns">
+                <style>
+                    .zoom:hover {
+                        transform: scale(1.25);
+                    }
+                </style>
+                <div class="card">
+                    <a href="comparisons.html">
+                        <img src="Images/comparison-card.png" class="card-main-img-top zoom" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Comparisons</h5>
+                    </a>
+                    <p class="card-text">View a side by side comparison of how Latitude affects
+                        Temperature (F),
+                        Humidity (%), Cloudiness (%) and Wind Speed (mph)</p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <a href="data.html">
+                    <img src="Images/data-card.png" class="card-main-img-top zoom" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Data</h5>
+                </a>
+
+                <p class="card-text">View the data behind the plots. Information on over 500 Cities. Download the data
+                    as a csv to
+                    perform your own analysis!</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="plots.html">
+                <img src="Images/latitude_vs_cloudiness.png" class="card-main-img-top zoom" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Plots</h5>
+            </a>
+            <p class="card-text">View each individual plot along with our analysis & explanation of
+                how latitude may correlate with each one of the four chosen weather conditions.</p>
+        </div>
+        </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>
